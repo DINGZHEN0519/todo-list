@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
@@ -6,4 +7,9 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
+=======
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
+>>>>>>> adbb043 (Deploy Fix)
 }
