@@ -1514,8 +1514,8 @@ export default function App() {
                         typeof task.dueAt === 'number' &&
                         isTomorrow(task.dueAt, nowTs)
                       
-                      // Format time display
-                      const timeDisplay = task.dueTime ? task.dueTime : (task.dueAt ? '23:59' : null)
+                      // Format time display - only show if time is set
+                      const timeDisplay = task.dueTime || null
                       
                       return (
                         <li

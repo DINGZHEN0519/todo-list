@@ -243,7 +243,7 @@ export default function CalendarView({
             <ul className="space-y-2">
               {tasksForSelectedDate.map((task) => {
                 const meta = PRIORITY_META[task.priority] || PRIORITY_META.medium
-                const timeDisplay = task.dueTime || '23:59'
+                const timeDisplay = task.dueTime || null
                 
                 return (
                   <li
@@ -262,7 +262,7 @@ export default function CalendarView({
                           {task.priority === 'high' ? '高' : task.priority === 'low' ? '低' : '中'}
                         </span>
                         <span className="text-xs" style={{ color: 'var(--theme-text-secondary)' }}>
-                          {timeDisplay}
+                          {timeDisplay || null}
                         </span>
                       </div>
                       <p className={`mt-1 text-sm font-medium ${task.done ? 'text-zinc-400 line-through' : 'text-zinc-800'}`}>
